@@ -9,6 +9,7 @@ namespace CLOD.AlwaysTravels.AppCore.Interfaces.Services
 {
     public interface IPackagesService
     {
+        Task<IEnumerable<Package>> GetAllPackagesAsync();
         Task<Package> GetPackageAsync(int id);
         Task<int> InsertPackageAsync(Package package);
 

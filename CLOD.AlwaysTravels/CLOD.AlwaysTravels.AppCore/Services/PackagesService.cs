@@ -18,6 +18,12 @@ namespace CLOD.AlwaysTravels.AppCore.Services
             _packagesRepository = packagesRepository;
         }
 
+        public async Task<IEnumerable<Package>> GetAllPackagesAsync()
+        {
+            var list = await _packagesRepository.GetAllAsync();
+            return list;
+        }
+
         public async Task<Package> GetPackageAsync(int id)
         {
             var obj = await _packagesRepository.GetAsync(id);
@@ -29,5 +35,7 @@ namespace CLOD.AlwaysTravels.AppCore.Services
             var id = await _packagesRepository.InsertAsync(package);
             return id;
         }
+
+        
     }
 }

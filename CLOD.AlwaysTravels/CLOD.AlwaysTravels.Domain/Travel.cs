@@ -1,4 +1,5 @@
-﻿using RepoDb.Attributes;
+﻿using Newtonsoft.Json;
+using RepoDb.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Data;

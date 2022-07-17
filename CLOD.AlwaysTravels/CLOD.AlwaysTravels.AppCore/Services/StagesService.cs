@@ -18,9 +18,10 @@ namespace CLOD.AlwaysTravels.AppCore.Services
             _stagesRepository = stagesRepository;
         }
 
-        public Task<IEnumerable<Stage>> GetAllStagesAsync()
+        public async Task<IEnumerable<Stage>> GetAllStagesAsync()
         {
-            throw new NotImplementedException();
+            var list = await _stagesRepository.GetAllAsync();
+            return list;
         }
 
         public async Task<Stage> GetStageAsync(int id)
