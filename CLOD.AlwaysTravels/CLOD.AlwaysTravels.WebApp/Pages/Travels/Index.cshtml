@@ -1,0 +1,68 @@
+﻿@page
+@model CLOD.AlwaysTravels.WebApp.Pages.Travels.IndexModel
+@{
+}
+
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr class="table-primary">
+                <th scope="col">Title</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Travel.Title</td>
+                <td>@Model.Travel.StartDate.ToString("dd/MM/yyyy")</td>
+                <td>@Model.Travel.EndDate.ToString("dd/MM/yyyy")</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <div class="container mt-3">
+        <p class="h2 text-secondary">Travel Stages</p>
+        @foreach (var s in Model.Stages)
+        {
+            <table class="table">
+                <thead>
+                    <tr class="table-secondary">
+                        <th scope="col">City</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@s.Title</td>
+                        <td>@s.Date.ToString("dd/MM/yyyy")</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <table class="table">
+                @{
+                    var spPerStage = Model.SP.Where(sp => sp.StageId == s.Id);
+                }
+                @foreach (var sp in spPerStage)
+                {
+                    var packages = @Model.Packages.Where(p => p.Id == sp.PackageId);
+                    foreach (var p in packages)
+                    {
+                        <thead>
+                            <tr class="table">
+                                <th scope="col">@p.Description</th>
+                            </tr>
+                        </thead>
+                        
+                    }
+
+                }
+
+            </table>
+        }
+    </div>
+
+</div>

@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr class="table-primary">
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+                <th scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var t in Model.Travels)
+            {
+                <tr>
+                    <th scope="row">@t.Id</th>
+                    <td>@t.Title</td>
+                    <td>@t.StartDate.ToString("dd/MM/yyyy")</td>
+                    <td>@t.EndDate.ToString("dd/MM/yyyy")</td>
+                    <td><a asp-page="/Travels/Index" asp-route-id=@t.Id >Details</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
