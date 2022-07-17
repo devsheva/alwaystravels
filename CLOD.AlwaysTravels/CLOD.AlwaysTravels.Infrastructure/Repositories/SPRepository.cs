@@ -34,9 +34,11 @@ namespace CLOD.AlwaysTravels.Infrastructure.Repositories
             return await DB.QueryAsync<SP>(sp => sp.PackageId == packageId);
         }
 
-        public Task<IEnumerable<SP>> GetAllAsync()
+        public async Task<IEnumerable<SP>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var cs = _configuration.GetConnectionString("AlwaysTravelsDB");
+            using var DB = new NpgsqlConnection(cs);
+            return await DB.QueryAllAsync<SP>();
         }
 
         public Task<SP> GetAsync(int id)

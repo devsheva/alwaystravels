@@ -35,5 +35,11 @@ namespace CLOD.AlwaysTravels.AppCore.Services
             var id = await _spRepository.InsertAsync(sp);
             return id;
         }
+
+        public async Task<IEnumerable<SP>> GetAllSPsAsync()
+        {
+            var list = await _spRepository.GetAllAsync();
+            return list;
+        }
     }
 }

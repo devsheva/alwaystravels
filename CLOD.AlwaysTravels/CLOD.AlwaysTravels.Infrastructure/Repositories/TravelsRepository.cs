@@ -3,6 +3,7 @@ using CLOD.AlwaysTravels.Domain;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
 using RepoDb;
+using RepoDb.Enumerations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,10 @@ namespace CLOD.AlwaysTravels.Infrastructure.Repositories
         {
             var cs = _configuration.GetConnectionString("AlwaysTravelsDB");
             using var DB = new NpgsqlConnection(cs);
-            return await DB.QueryAllAsync<Travel>();
+            return await DB.QueryAllAsync<Travel>(orderBy: OrderField.Parse(new 
+            {
+                StartDate = Order.Ascending
+            }));
         }
 
         public async Task<Travel> GetAsync(int id)

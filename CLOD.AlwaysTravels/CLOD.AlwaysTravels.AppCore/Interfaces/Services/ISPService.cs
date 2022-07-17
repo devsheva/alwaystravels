@@ -9,6 +9,7 @@ namespace CLOD.AlwaysTravels.AppCore.Interfaces.Services
 {
     public interface ISPService 
     {
+        Task<IEnumerable<SP>> GetAllSPsAsync();
         Task<IEnumerable<SP>> GetSPsByStageAsync(int stageId);
         Task<IEnumerable<SP>> GetSPsByPackageAsync(int packageId);
         Task<int> InsertSPAsync(SP sp);
