@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CLOD.AlwaysTravels.Domain\CLOD.AlwaysTravels.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

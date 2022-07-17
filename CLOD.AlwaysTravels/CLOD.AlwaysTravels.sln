@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLOD.AlwaysTravels.API", "CLOD.AlwaysTravels.API\CLOD.AlwaysTravels.API.csproj", "{1797117F-2907-4041-9967-93A401B14A13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLOD.AlwaysTravels.API", "CLOD.AlwaysTravels.API\CLOD.AlwaysTravels.API.csproj", "{1797117F-2907-4041-9967-93A401B14A13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLOD.AlwaysTravels.Domain", "CLOD.AlwaysTravels.Domain\CLOD.AlwaysTravels.Domain.csproj", "{329E6E90-CE4B-40DB-85B5-0C3E023EAE48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLOD.AlwaysTravels.AppCore", "CLOD.AlwaysTravels.AppCore\CLOD.AlwaysTravels.AppCore.csproj", "{859A450C-36B4-46F7-A06D-3AD121AC520E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLOD.AlwaysTravels.Infrastructure", "CLOD.AlwaysTravels.Infrastructure\CLOD.AlwaysTravels.Infrastructure.csproj", "{95BE5EF6-08AC-472D-81D0-49DCC40A9DAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{1797117F-2907-4041-9967-93A401B14A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1797117F-2907-4041-9967-93A401B14A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1797117F-2907-4041-9967-93A401B14A13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{329E6E90-CE4B-40DB-85B5-0C3E023EAE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{329E6E90-CE4B-40DB-85B5-0C3E023EAE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{329E6E90-CE4B-40DB-85B5-0C3E023EAE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{329E6E90-CE4B-40DB-85B5-0C3E023EAE48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{859A450C-36B4-46F7-A06D-3AD121AC520E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{859A450C-36B4-46F7-A06D-3AD121AC520E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{859A450C-36B4-46F7-A06D-3AD121AC520E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{859A450C-36B4-46F7-A06D-3AD121AC520E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95BE5EF6-08AC-472D-81D0-49DCC40A9DAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95BE5EF6-08AC-472D-81D0-49DCC40A9DAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95BE5EF6-08AC-472D-81D0-49DCC40A9DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95BE5EF6-08AC-472D-81D0-49DCC40A9DAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
